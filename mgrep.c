@@ -5,7 +5,10 @@
 
 void main(int argc,char ** argv){
     if (argc<3){
-        if(strcmp(argv[1],"--help")!=0){
+        if(argc<2){
+        fprintf(stderr,"pls refer to ./mgrep -- help  for details on how to use mgrep ");
+        exit(1);}
+        else if((strcmp(argv[1],"--help")!=0)){
         fprintf(stderr,"pls refer to ./mgrep -- help  for details on how to use mgrep ");
         exit(1);}
        printf( "Search for PATTERNS in each FILE.\n");
@@ -13,6 +16,7 @@ void main(int argc,char ** argv){
        printf("multiple files can be entered after the pattern");
        exit(0);
     }
+    else{
     char *key= argv[1];
     int i;
     for (i=2;i<argc;i++){
@@ -36,5 +40,6 @@ void main(int argc,char ** argv){
             printf("no instances of keywords %s found in file %s",key,argv[i]);
         }
         printf("\n\n\n");
+    }
     }
 }
