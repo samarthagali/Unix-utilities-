@@ -4,7 +4,8 @@
 #include <stdlib.h>
 
 void main(int argc, char** argv){
-    if (argc!=2 && argc!=3){
+    if (argc!=2 && argc!=3) {
+        printf("%d",argc);
         fprintf(stderr,"incorrect command for mycat editor\nenter mcat --help inorder to view all possible command options ");
         exit(1);
     }
@@ -25,14 +26,14 @@ void main(int argc, char** argv){
                 fclose(fptr);
                 if (line){
                     free(line);}
-                exit(0);}
+                exit(0);}   
             else{
                 printf("Possible Commands are:\n");
                 printf("./mcat _filename_:\n");
                 printf("    reads the file into stdout if it exists returns an  error if the file is not found\n");
                 printf("./mcat # _filename_\n");
                 printf("    creates a file with the name specified if it doesn't exist\n");
-                printf("    if file does exist it rewrites the file from line 1 ");
+                printf("    if file does exist it rewrites the file from line 1 \n");
                 printf("    writes until ~ character is encountered");
                 exit(0);            
                 }
@@ -49,7 +50,7 @@ void main(int argc, char** argv){
             exit (0);
         }
         else{
-            fprintf(stderr,"incorrect command for mycat editor\nenter mcat --help inorder to view all possible command options ");
+            fprintf(stderr," last else condition incorrect command for mycat editor\nenter mcat --help inorder to view all possible command options ");
             exit(1);
         }
     }
