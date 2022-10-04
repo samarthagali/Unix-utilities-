@@ -5,8 +5,8 @@
 
 void main(int argc, char** argv){
     if (argc!=2 && argc!=3) {
-        printf("%d",argc);
-        fprintf(stderr,"incorrect command for mycat editor\nenter mcat --help inorder to view all possible command options ");
+        printf("%s",argv[1]);
+        fprintf(stderr,"incorrect command for mycat editor\nenter ./mcat --help inorder to view all possible command options ");
         exit(1);
     }
     else{
@@ -15,7 +15,7 @@ void main(int argc, char** argv){
                 FILE *fptr;
                 fptr=fopen(argv[1],"r");
                 if (fptr==NULL){
-                    fprintf(stderr,"FILE %s not found",argv[1]);
+                    fprintf(stderr,"File %s not found",argv[1]);
                     exit(1);
                 }
                 char * line=NULL;
@@ -29,28 +29,34 @@ void main(int argc, char** argv){
                 exit(0);}   
             else{
                 printf("Possible Commands are:\n");
-                printf("./mcat _filename_:\n");
-                printf("    reads the file into stdout if it exists returns an  error if the file is not found\n");
-                printf("./mcat # _filename_\n");
+                printf("./mcat _filename_:");
+                printf("    reads the file into stdout if it exists returns an  error if the file is not found\n\n");
+                printf("./mcat e _filename_:");
                 printf("    creates a file with the name specified if it doesn't exist\n");
-                printf("    if file does exist it rewrites the file from line 1 \n");
-                printf("    writes until ~ character is encountered");
+                printf("                       if file does exist it rewrites the file from line 1 \n");
+                printf("                       writes until ~ character is encountered\n");
                 exit(0);            
                 }
         }
-        if (strcmp(argv[1],"#")==0){
+        if (strcmp(argv[1],"e")==0){
             FILE *fptr;
             fptr=fopen(argv[2],"w");
-            char *str;
+            char str[200];
             char c='~';
             do{
-                scanf("%s",str);
+                fgets(str, sizeof(str), stdin);
+                if (strchr(str,c)){
+                    break;
+                }
                 fputs(str,fptr);
-            }while (strchr(str,c));
+            }while(1);
+            str[strlen(str)-2]='\n';
+            str[strlen(str)-1] = '\0';
+            fputs(str,fptr);
             exit (0);
         }
         else{
-            fprintf(stderr," last else condition incorrect command for mycat editor\nenter mcat --help inorder to view all possible command options ");
+            fprintf(stderr,"incorrect command for mycat editor\nenter ./mcat --help inorder to view all possible command options ");
             exit(1);
         }
     }
