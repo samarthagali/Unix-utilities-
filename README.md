@@ -4,7 +4,7 @@
 ### mcat
 The program mcat is a simple program. Generally, it reads a file as specified by the user and prints its contents. A typical usage is as follows, in which the user wants to see the contents of main.c, and thus types:
 
-As shown, mcat reads the file main.c and prints out its contents. 
+A mcat reads the file. for example, main.c and prints out its contents. 
 
 This will make a single executable binary called mcat which can be run
 
