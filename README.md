@@ -32,7 +32,7 @@ If mgrep encounters a file that it cannot open, it should print "wgrep: cannot o
 In all other cases, wgrep should exit with return code 0.
 
 
-### mrev.c
+### mrev
 An input file might look like this:
 
 ```
