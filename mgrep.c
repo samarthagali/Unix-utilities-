@@ -11,9 +11,7 @@ void main(int argc,char ** argv){
         else if((strcmp(argv[1],"--help")!=0)){
         fprintf(stderr,"pls refer to ./mgrep -- help  for details on how to use mgrep ");
         exit(1);}
-       printf( "Search for PATTERNS in each FILE.\n");
-       printf("./mgrep _pattern_ _filenames\n");
-       printf("multiple files can be entered after the pattern");
+       printf( "Search for PATTERNS in each FILE.\n./mgrep _pattern_ _filenames\nmultiple files can be entered after the pattern");
        exit(0);
     }
     else{

@@ -29,10 +29,8 @@ void main(int argc, char** argv){
                 exit(0);}   
             else{
                 printf("Possible Commands are:\n");
-                printf("./mcat _filename_:");
-                printf("    reads the file into stdout if it exists returns an  error if the file is not found\n\n");
-                printf("./mcat e _filename_:");
-                printf("    creates a file with the name specified if it doesn't exist\n");
+                printf("./mcat _filename_:    reads the file into stdout if it exists returns an  error if the file is not found\n\n");
+                printf("./mcat e _filename_:    creates a file with the name specified if it doesn't exist\n");
                 printf("                       if file does exist it rewrites the file from line 1 \n");
                 printf("                       writes until ~ character is encountered\n");
                 exit(0);            
