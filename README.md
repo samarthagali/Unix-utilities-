@@ -51,7 +51,7 @@ this
 hello
 ```
 
-The different ways to invoke the file (as above) all correspond to slightly different ways of using this simple new Unix utility.When invoked with two command-line arguments, the program should read from the input file the user supplies and write the reversed version of said file to the output file the user supplies.
+The different ways to invoke the tool are with two command-line arguments and with one,when invoked with two arguments the program should read from the input file the user supplies and write the reversed version of said file to the output file the user supplies.
 
-When invoked with just one command-line argument, the user supplies the input file, but the file should be printed to the screen. In Unix-based systems, printing to the screen is the same as writing to a special file known as standard output, or stdout for short.
+When invoked with just one argument, the user supplies the input file, but the file should be printed to the screen. In Unix-based systems, printing to the screen is the same as writing to a special file known as standard output, or stdout for short.
 
