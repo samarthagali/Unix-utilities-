@@ -5,11 +5,11 @@
 
 
 void readfcat(char * inpfile){
-    FILE *fptr;
+    FILE *fptr ;
     fptr=fopen(inpfile,"r");
     if (fptr==NULL){
         fprintf(stderr,"File %s not found",inpfile);
-        exit(1);
+        return;
     }
     char * line=NULL;
     size_t read,len=0;
@@ -18,13 +18,26 @@ void readfcat(char * inpfile){
     fclose(fptr);
     if (line){
     free(line);}
-    exit(0);
+    printf("\n");
+    return;
 }
 
-void writefcat(char * inpstring,char * outfile,FILE *fptr){
-    char str[200];
-    char c='~';
-    fputs(inpstring,fptr);
+void writefcat(char * outfile){
+        FILE *fptr;
+        fptr=fopen(outfile,"w");
+        char str[200];
+        char c='~';
+        do{
+            fgets(str, sizeof(str), stdin);
+            printf("%s",str);
+            if (strchr(str,c)){
+                break;
+            }
+            fputs(str,fptr);
+        }while(1);
+        str[strlen(str)-2]='\n';
+        str[strlen(str)-1] = '\0';
+        fputs(str,fptr);
 }
 
 
@@ -35,3 +48,4 @@ void helpcat(){
     printf("                       if file does exist it rewrites the file from line 1 \n");
     printf("                       writes until ~ character is encountered\n");
 }
+

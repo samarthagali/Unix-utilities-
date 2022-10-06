@@ -7,7 +7,7 @@ int search(char * key,char * inpfile){
     FILE * fptr;
     fptr=fopen(inpfile,"r");
     if (fptr==NULL){
-        fprintf(stderr,"File %s not found",inpfile);
+        fprintf(stderr,"File %s not found\n",inpfile);
         return 0;
     }
     printf("searching for keyword in file %s\n",inpfile);
@@ -20,4 +20,10 @@ int search(char * key,char * inpfile){
             printf("%s",line);
         }
     }
+    printf("\n");
+}
+
+
+void grephelp(){
+    printf( "Search for PATTERNS in each FILE.\n./mgrep _pattern_ _filenames\nmultiple files can be entered after the pattern\n");
 }
