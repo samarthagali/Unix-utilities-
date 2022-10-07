@@ -15,6 +15,7 @@ void insertfront(char * str){
 }
 
 void display(char * inpfile){
+    i=0;
     FILE * fptr;
     fptr=fopen(inpfile,"r");
     int j;
@@ -34,26 +35,27 @@ void display(char * inpfile){
 }
 
 void writeinto(char * inpfile,char * outfile){
-    FILE * fptr;
-    fptr=fopen(inpfile,"r");
-    int j;
-    if (fptr==NULL){
-        fprintf(stderr,"File %s not found",inpfile);
-        exit(1);
-    }
-    char * line=NULL;
-    size_t read,len=0;
-    while ((read = getline(&line, &len, fptr)) != -1) {
-        insertfront(line);
-    }
-    fptr=fopen(outfile,"w"); 
-    for (j=i-1;j>=0;j=j-1)
-        fprintf(fptr,"%s",store[j]);
-    
-    if(fptr!=NULL)
-        fclose(fptr);
-    if(line)
-        free(line);
+    i=0;
+    printf("writing into files for mrev isn't available will be updated for future versions of shell due to a bug");
+    // FILE * fptr;
+    // fptr=fopen(inpfile,"r");
+    // int j;
+    // if (fptr==NULL){
+    //     fprintf(stderr,"File %s not found",inpfile);
+    //     exit(1);
+    // }
+    // char * line=NULL;
+    // store=(char **) malloc( (200*20)*sizeof(char));
+    // size_t read,len=0;
+    // while ((read = getline(&line, &len, fptr)) != -1) {
+    //     insertfront(line);
+    // }
+    // fptr=fopen(outfile,"w"); 
+    // fwrite(store,1,sizeof(store),fptr);
+    // fflush(fptr); 
+    // fclose(fptr);
+    // if(line)
+    //     free(line);
 }
 
 void revhelp(){

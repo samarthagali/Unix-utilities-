@@ -38,6 +38,8 @@ void writefcat(char * outfile){
         str[strlen(str)-2]='\n';
         str[strlen(str)-1] = '\0';
         fputs(str,fptr);
+        fflush(fptr);
+        fclose(fptr);
 }
 
 

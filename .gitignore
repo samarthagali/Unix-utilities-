@@ -10,3 +10,10 @@ t7.txt
 t6.txt
 shell/t7.tx
 shell/shell
+
+
+test/stringarr.c
+test/test
+    shell/t8.txt
+shell/t9.txt
+shell/t8.txt

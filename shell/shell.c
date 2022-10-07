@@ -85,6 +85,7 @@ void gotorev(char * line){
         display(last);
         return;
     }
+    // printf("%s",second);
     last[strlen(last)-1]='\0';
     writeinto(second,last);
 }
