@@ -27,3 +27,4 @@ int search(char * key,char * inpfile){
 void grephelp(){
     printf( "Search for PATTERNS in each FILE.\n./mgrep _pattern_ _filenames\nmultiple files can be entered after the pattern\n");
 }
+
