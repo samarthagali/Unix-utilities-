@@ -23,6 +23,7 @@ bye bye
 welcome to the jungle
 hi my name is sam
 ```
+fixes made :writing works for mcat not mrev - update mrev after fix 2
 
 ###fix 2 (complete by 11/10/2022)
 
