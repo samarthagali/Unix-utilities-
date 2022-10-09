@@ -1,7 +1,7 @@
 #include "mcat.h"
 #include "mgrep.h"
 #include "mrev.h"
-
+#include <ncurses.h>
 void gotomcat(char * line){
     char * writer="mcat e";
     char * delim=" ";
@@ -90,34 +90,38 @@ void gotorev(char * line){
     writeinto(second,last);
 }
 
-void main(int argc,char** argv){
-    if(argc==1){
+void exec(char * line){
     char *q="quit";
-    char  line[200];
-    char check[5];
     char * cat="mcat ";
     char * grep="mgrep ";
     char * rev="mrev ";
+    char check[5];
+    if (strstr(line,q)){
+        printf("\nexiting sam shell\n");
+        exit(0);
+        }
+        memcpy(check,line,5);
+    if(strstr(check,cat)){
+        gotomcat(line);
+        return;
+        }
+    if(strstr(check,grep)){
+        gotogrep(line);
+        return;
+        }
+    if(strstr(check,rev)){
+        gotorev(line);
+        return;
+        }
+}
+
+void main(int argc,char** argv){
+    if(argc==1){
+    char  line[200];
     while(1){
         printf("sam-shell>");
         fgets(line, sizeof(line), stdin);
-        if (strstr(line,q)){
-            printf("\nexiting sam shell\n");
-            exit(0);
-        }
-        memcpy(check,line,5);
-        if(strstr(check,cat)){
-            gotomcat(line);
-            continue;
-        }
-        if(strstr(check,grep)){
-            gotogrep(line);
-            continue;
-        }
-        if(strstr(check,rev)){
-            gotorev(line);
-            continue;
-        }
+        exec(line);
     }
     }
     else{

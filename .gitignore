@@ -17,3 +17,11 @@ test/test
     shell/t8.txt
 shell/t9.txt
 shell/t8.txt
+test/a.out
+test/uparrow.c
+shell2/a.out
+shell2/mcat.h
+shell2/mgrep.h
+shell2/mrev.h
+shell2/shell
+shell2/shell.c
