@@ -1,6 +1,6 @@
-##future fixes
+## future fixes
 
-###fix 1 (complete by 08/10/2022)
+### fix 1 (complete by 08/10/2022)
 
 fix inability to write to files
 
@@ -23,9 +23,11 @@ bye bye
 welcome to the jungle
 hi my name is sam
 ```
+fixes made : writing works for mcat not mrev - update mrev after fix 2
 
-###fix 2 (complete by 11/10/2022)
+### fix 2 (complete by 11/10/2022)
 
 ensure program stores previous commands upto a certain extent(previous 20 commands)
+
 
 
