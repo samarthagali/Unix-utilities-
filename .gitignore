@@ -25,3 +25,4 @@ shell2/mgrep.h
 shell2/mrev.h
 shell2/shell
 shell2/shell.c
+shell/prev.h
