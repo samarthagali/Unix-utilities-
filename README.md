@@ -26,7 +26,7 @@ The goal of the reversing program is to read in the data from the specified inpu
 
 
 
-###prev
+### prev
 Has 3 functions
 - exec prev :executes the previous command
 - show prev :shows the previous command
