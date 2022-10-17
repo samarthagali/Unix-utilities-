@@ -10,8 +10,6 @@ t7.txt
 t6.txt
 shell/t7.tx
 shell/shell
-
-
 test/stringarr.c
 test/test
     shell/t8.txt
@@ -26,3 +24,4 @@ shell2/mrev.h
 shell2/shell
 shell2/shell.c
 shell/prev.h
+test/circle.c
