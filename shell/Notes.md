@@ -29,5 +29,7 @@ fixes made : writing works for mcat not mrev - update mrev after fix 2
 
 ensure program stores previous commands upto a certain extent(previous 20 commands)
 
+**fix2 done**
+
 
 
