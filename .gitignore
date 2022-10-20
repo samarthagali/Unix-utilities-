@@ -25,3 +25,4 @@ shell2/shell
 shell2/shell.c
 shell/prev.h
 test/circle.c
+test/dir.c
