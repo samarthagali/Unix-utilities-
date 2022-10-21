@@ -2,6 +2,7 @@
 #include "mgrep.h"
 #include "mrev.h"
 #include "help.h"
+#include "dirs.h"
 void gotomcat(char * line);
 
 void gotogrep(char * line);
